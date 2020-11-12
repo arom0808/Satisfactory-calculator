@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>521</width>
+    <height>363</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Satisfactory calculator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Resources.qrc">
+    <normaloff>:/Img/Icons/ico.png</normaloff>:/Img/Icons/ico.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout"/>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>521</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="CreateProjectMenuFile"/>
+    <addaction name="OpenProjectMenuFile"/>
+    <addaction name="OpenRecentFilesMenuFile"/>
+    <addaction name="separator"/>
+    <addaction name="SettingsMenuFile"/>
+    <addaction name="separator"/>
+    <addaction name="ExitMenuFile"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="CreateProjectMenuFile">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/Img/Icons/create.svg</normaloff>:/Img/Icons/create.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Create project</string>
+   </property>
+   <property name="toolTip">
+    <string>Create project</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="OpenProjectMenuFile">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/Img/Icons/open.svg</normaloff>:/Img/Icons/open.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Open Project</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Project</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="OpenRecentFilesMenuFile">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/Img/Icons/open.svg</normaloff>:/Img/Icons/open.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Open recent project</string>
+   </property>
+  </action>
+  <action name="ExitMenuFile">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/Img/Icons/exit.svg</normaloff>:/Img/Icons/exit.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="toolTip">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="SettingsMenuFile">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/Img/Icons/settings.svg</normaloff>:/Img/Icons/settings.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Settings</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+P</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>ExitMenuFile</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>260</x>
+     <y>181</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>270</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
